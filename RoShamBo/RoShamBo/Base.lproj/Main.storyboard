@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9052" systemVersion="15B22c" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RoShamBo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzG-eg-pQF">
+                                <rect key="frame" x="428" y="408" width="232" height="160"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="52"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-kR-aDK" userLabel="lizard">
+                                <rect key="frame" x="160" y="640" width="384" height="384"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration" label="lizard"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" image="lizard"/>
+                                <state key="highlighted" image="lizard-highlighted"/>
+                                <state key="focused" image="lizard-highlighted"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8F-3y-qrS" userLabel="paper">
+                                <rect key="frame" x="620" y="296" width="384" height="384"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration" label="paper"/>
+                                <state key="normal" image="paper"/>
+                                <state key="highlighted" image="paper-highlighted"/>
+                                <state key="focused" image="paper-highlighted"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22H-hc-NPg" userLabel="scissors">
+                                <rect key="frame" x="544" y="640" width="384" height="384"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration" label="scissors"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" image="scissors"/>
+                                <state key="highlighted" image="scissors-highlighted"/>
+                                <state key="focused" image="scissors-highlighted"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUy-Df-fFp" userLabel="rock">
+                                <rect key="frame" x="352" y="24" width="384" height="384"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration" label="rock"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="LUy-Df-fFp" secondAttribute="width" multiplier="1:1" id="1Y7-UJ-gGG"/>
+                                </constraints>
+                                <state key="normal" image="rock"/>
+                                <state key="highlighted" image="rock-highlighted"/>
+                                <state key="focused" image="rock-highlighted"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSe-CW-Pld" userLabel="spock">
+                                <rect key="frame" x="84" y="296" width="384" height="384"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration" label="spock"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" image="spock"/>
+                                <state key="highlighted" image="spock-highlighted"/>
+                                <state key="focused" image="spock-highlighted"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.28627450980000002" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mzG-eg-pQF" firstAttribute="centerY" secondItem="cSe-CW-Pld" secondAttribute="centerY" id="2Wr-JJ-JMD"/>
+                            <constraint firstItem="eKR-kR-aDK" firstAttribute="centerY" secondItem="22H-hc-NPg" secondAttribute="centerY" id="3MW-mq-uHu"/>
+                            <constraint firstItem="cSe-CW-Pld" firstAttribute="height" secondItem="LUy-Df-fFp" secondAttribute="height" id="57A-gj-Yf8"/>
+                            <constraint firstItem="K8F-3y-qrS" firstAttribute="height" secondItem="LUy-Df-fFp" secondAttribute="height" id="5pM-zs-YD8"/>
+                            <constraint firstItem="eKR-kR-aDK" firstAttribute="width" secondItem="LUy-Df-fFp" secondAttribute="width" id="GoF-JV-E6B"/>
+                            <constraint firstItem="eKR-kR-aDK" firstAttribute="centerX" secondItem="LUy-Df-fFp" secondAttribute="leading" id="Inw-c4-6wr"/>
+                            <constraint firstItem="22H-hc-NPg" firstAttribute="height" secondItem="LUy-Df-fFp" secondAttribute="height" id="L9H-rQ-Gg4"/>
+                            <constraint firstItem="eKR-kR-aDK" firstAttribute="height" secondItem="LUy-Df-fFp" secondAttribute="height" id="Obs-cR-caM"/>
+                            <constraint firstItem="K8F-3y-qrS" firstAttribute="width" secondItem="LUy-Df-fFp" secondAttribute="width" id="SgA-x5-PXy"/>
+                            <constraint firstItem="K8F-3y-qrS" firstAttribute="leading" secondItem="LUy-Df-fFp" secondAttribute="trailing" constant="-116" id="VVj-nk-AgD"/>
+                            <constraint firstItem="mzG-eg-pQF" firstAttribute="trailing" secondItem="K8F-3y-qrS" secondAttribute="leading" constant="40" id="ZPf-ek-0sH"/>
+                            <constraint firstItem="cSe-CW-Pld" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="aZY-va-puo"/>
+                            <constraint firstItem="K8F-3y-qrS" firstAttribute="top" secondItem="LUy-Df-fFp" secondAttribute="centerY" constant="80" id="amy-Pp-xSD"/>
+                            <constraint firstItem="mzG-eg-pQF" firstAttribute="leading" secondItem="cSe-CW-Pld" secondAttribute="trailing" constant="-40" id="bH4-pF-toO"/>
+                            <constraint firstItem="cSe-CW-Pld" firstAttribute="width" secondItem="LUy-Df-fFp" secondAttribute="width" id="cal-wt-iHt"/>
+                            <constraint firstItem="22H-hc-NPg" firstAttribute="centerX" secondItem="LUy-Df-fFp" secondAttribute="trailing" id="nrC-XJ-t7K"/>
+                            <constraint firstItem="22H-hc-NPg" firstAttribute="top" secondItem="K8F-3y-qrS" secondAttribute="bottom" constant="-40" id="nw6-Pq-aPl"/>
+                            <constraint firstItem="LUy-Df-fFp" firstAttribute="leading" secondItem="cSe-CW-Pld" secondAttribute="trailing" constant="-116" id="ob8-BF-q5u"/>
+                            <constraint firstItem="22H-hc-NPg" firstAttribute="width" secondItem="LUy-Df-fFp" secondAttribute="width" id="rla-dO-MXY"/>
+                            <constraint firstItem="cSe-CW-Pld" firstAttribute="centerY" secondItem="K8F-3y-qrS" secondAttribute="centerY" id="w2F-nt-Lxb"/>
+                            <constraint firstItem="LUy-Df-fFp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" symbolic="YES" id="wdY-9O-p3o"/>
+                            <constraint firstItem="LUy-Df-fFp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="xUL-GG-2YS"/>
+                            <constraint firstItem="mzG-eg-pQF" firstAttribute="top" secondItem="LUy-Df-fFp" secondAttribute="bottom" id="zMm-RL-VuB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-791" y="234"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lizard" width="307" height="307"/>
+        <image name="lizard-highlighted" width="307" height="307"/>
+        <image name="paper" width="307" height="307"/>
+        <image name="paper-highlighted" width="307" height="307"/>
+        <image name="rock" width="307" height="307"/>
+        <image name="rock-highlighted" width="307" height="307"/>
+        <image name="scissors" width="307" height="307"/>
+        <image name="scissors-highlighted" width="307" height="307"/>
+        <image name="spock" width="307" height="307"/>
+        <image name="spock-highlighted" width="307" height="307"/>
+    </resources>
+</document>
