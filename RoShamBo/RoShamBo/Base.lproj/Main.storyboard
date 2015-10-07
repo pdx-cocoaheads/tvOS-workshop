@@ -2,8 +2,6 @@
 <document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9052" systemVersion="15B22c" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -20,92 +18,124 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzG-eg-pQF">
-                                <rect key="frame" x="428" y="408" width="232" height="160"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXR-GY-zSY" userLabel="Inputs">
+                                <rect key="frame" x="20" y="20" width="960" height="1040"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzG-eg-pQF">
+                                        <rect key="frame" x="364" y="505" width="232" height="62"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="52"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-kR-aDK" userLabel="lizard">
+                                        <rect key="frame" x="96" y="636" width="384" height="384"/>
+                                        <animations/>
+                                        <accessibility key="accessibilityConfiguration" label="lizard"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" image="lizard"/>
+                                        <state key="highlighted" image="lizard-highlighted"/>
+                                        <state key="focused" image="lizard-highlighted"/>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="hKD-Su-sKw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8F-3y-qrS" userLabel="paper">
+                                        <rect key="frame" x="556" y="292" width="384" height="384"/>
+                                        <animations/>
+                                        <accessibility key="accessibilityConfiguration" label="paper"/>
+                                        <state key="normal" image="paper"/>
+                                        <state key="highlighted" image="paper-highlighted"/>
+                                        <state key="focused" image="paper-highlighted"/>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="MAl-qT-Tky"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22H-hc-NPg" userLabel="scissors">
+                                        <rect key="frame" x="480" y="636" width="384" height="384"/>
+                                        <animations/>
+                                        <accessibility key="accessibilityConfiguration" label="scissors"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" image="scissors"/>
+                                        <state key="highlighted" image="scissors-highlighted"/>
+                                        <state key="focused" image="scissors-highlighted"/>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="haG-tg-aiW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSe-CW-Pld" userLabel="spock">
+                                        <rect key="frame" x="20" y="292" width="384" height="384"/>
+                                        <animations/>
+                                        <accessibility key="accessibilityConfiguration" label="spock"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                        <state key="normal" image="spock"/>
+                                        <state key="highlighted" image="spock-highlighted"/>
+                                        <state key="focused" image="spock-highlighted"/>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="R12-Sp-sFF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUy-Df-fFp" userLabel="rock">
+                                        <rect key="frame" x="288" y="20" width="384" height="384"/>
+                                        <animations/>
+                                        <accessibility key="accessibilityConfiguration" label="rock"/>
+                                        <state key="normal" image="rock"/>
+                                        <state key="highlighted" image="rock-highlighted"/>
+                                        <state key="focused" image="rock-highlighted"/>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="rmB-yw-eh5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="52"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKR-kR-aDK" userLabel="lizard">
-                                <rect key="frame" x="160" y="640" width="384" height="384"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VUa-Ld-zh0" userLabel="Results">
+                                <rect key="frame" x="876" y="20" width="960" height="1040"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lizard" highlightedImage="lizard-highlighted" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xI6-zi-Sdn">
+                                        <rect key="frame" x="0.0" y="0.0" width="960" height="333"/>
+                                        <animations/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="poisons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuv-iC-shB">
+                                        <rect key="frame" x="0.0" y="353" width="960" height="334"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="52"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spock" translatesAutoresizingMaskIntoConstraints="NO" id="Sf8-IB-ek0">
+                                        <rect key="frame" x="0.0" y="707" width="960" height="333"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
                                 <animations/>
-                                <accessibility key="accessibilityConfiguration" label="lizard"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" image="lizard"/>
-                                <state key="highlighted" image="lizard-highlighted"/>
-                                <state key="focused" image="lizard-highlighted"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8F-3y-qrS" userLabel="paper">
-                                <rect key="frame" x="620" y="296" width="384" height="384"/>
-                                <animations/>
-                                <accessibility key="accessibilityConfiguration" label="paper"/>
-                                <state key="normal" image="paper"/>
-                                <state key="highlighted" image="paper-highlighted"/>
-                                <state key="focused" image="paper-highlighted"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22H-hc-NPg" userLabel="scissors">
-                                <rect key="frame" x="544" y="640" width="384" height="384"/>
-                                <animations/>
-                                <accessibility key="accessibilityConfiguration" label="scissors"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" image="scissors"/>
-                                <state key="highlighted" image="scissors-highlighted"/>
-                                <state key="focused" image="scissors-highlighted"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUy-Df-fFp" userLabel="rock">
-                                <rect key="frame" x="352" y="24" width="384" height="384"/>
-                                <animations/>
-                                <accessibility key="accessibilityConfiguration" label="rock"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" secondItem="LUy-Df-fFp" secondAttribute="width" multiplier="1:1" id="1Y7-UJ-gGG"/>
-                                </constraints>
-                                <state key="normal" image="rock"/>
-                                <state key="highlighted" image="rock-highlighted"/>
-                                <state key="focused" image="rock-highlighted"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSe-CW-Pld" userLabel="spock">
-                                <rect key="frame" x="84" y="296" width="384" height="384"/>
-                                <animations/>
-                                <accessibility key="accessibilityConfiguration" label="spock"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" image="spock"/>
-                                <state key="highlighted" image="spock-highlighted"/>
-                                <state key="focused" image="spock-highlighted"/>
-                            </button>
+                            </stackView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.27450980390000002" green="0.28627450980000002" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="mzG-eg-pQF" firstAttribute="centerY" secondItem="cSe-CW-Pld" secondAttribute="centerY" id="2Wr-JJ-JMD"/>
-                            <constraint firstItem="eKR-kR-aDK" firstAttribute="centerY" secondItem="22H-hc-NPg" secondAttribute="centerY" id="3MW-mq-uHu"/>
-                            <constraint firstItem="cSe-CW-Pld" firstAttribute="height" secondItem="LUy-Df-fFp" secondAttribute="height" id="57A-gj-Yf8"/>
-                            <constraint firstItem="K8F-3y-qrS" firstAttribute="height" secondItem="LUy-Df-fFp" secondAttribute="height" id="5pM-zs-YD8"/>
-                            <constraint firstItem="eKR-kR-aDK" firstAttribute="width" secondItem="LUy-Df-fFp" secondAttribute="width" id="GoF-JV-E6B"/>
-                            <constraint firstItem="eKR-kR-aDK" firstAttribute="centerX" secondItem="LUy-Df-fFp" secondAttribute="leading" id="Inw-c4-6wr"/>
-                            <constraint firstItem="22H-hc-NPg" firstAttribute="height" secondItem="LUy-Df-fFp" secondAttribute="height" id="L9H-rQ-Gg4"/>
-                            <constraint firstItem="eKR-kR-aDK" firstAttribute="height" secondItem="LUy-Df-fFp" secondAttribute="height" id="Obs-cR-caM"/>
-                            <constraint firstItem="K8F-3y-qrS" firstAttribute="width" secondItem="LUy-Df-fFp" secondAttribute="width" id="SgA-x5-PXy"/>
-                            <constraint firstItem="K8F-3y-qrS" firstAttribute="leading" secondItem="LUy-Df-fFp" secondAttribute="trailing" constant="-116" id="VVj-nk-AgD"/>
-                            <constraint firstItem="mzG-eg-pQF" firstAttribute="trailing" secondItem="K8F-3y-qrS" secondAttribute="leading" constant="40" id="ZPf-ek-0sH"/>
-                            <constraint firstItem="cSe-CW-Pld" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="aZY-va-puo"/>
-                            <constraint firstItem="K8F-3y-qrS" firstAttribute="top" secondItem="LUy-Df-fFp" secondAttribute="centerY" constant="80" id="amy-Pp-xSD"/>
-                            <constraint firstItem="mzG-eg-pQF" firstAttribute="leading" secondItem="cSe-CW-Pld" secondAttribute="trailing" constant="-40" id="bH4-pF-toO"/>
-                            <constraint firstItem="cSe-CW-Pld" firstAttribute="width" secondItem="LUy-Df-fFp" secondAttribute="width" id="cal-wt-iHt"/>
-                            <constraint firstItem="22H-hc-NPg" firstAttribute="centerX" secondItem="LUy-Df-fFp" secondAttribute="trailing" id="nrC-XJ-t7K"/>
-                            <constraint firstItem="22H-hc-NPg" firstAttribute="top" secondItem="K8F-3y-qrS" secondAttribute="bottom" constant="-40" id="nw6-Pq-aPl"/>
-                            <constraint firstItem="LUy-Df-fFp" firstAttribute="leading" secondItem="cSe-CW-Pld" secondAttribute="trailing" constant="-116" id="ob8-BF-q5u"/>
-                            <constraint firstItem="22H-hc-NPg" firstAttribute="width" secondItem="LUy-Df-fFp" secondAttribute="width" id="rla-dO-MXY"/>
-                            <constraint firstItem="cSe-CW-Pld" firstAttribute="centerY" secondItem="K8F-3y-qrS" secondAttribute="centerY" id="w2F-nt-Lxb"/>
-                            <constraint firstItem="LUy-Df-fFp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" symbolic="YES" id="wdY-9O-p3o"/>
-                            <constraint firstItem="LUy-Df-fFp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="xUL-GG-2YS"/>
-                            <constraint firstItem="mzG-eg-pQF" firstAttribute="top" secondItem="LUy-Df-fFp" secondAttribute="bottom" id="zMm-RL-VuB"/>
+                            <constraint firstItem="jXR-GY-zSY" firstAttribute="width" secondItem="VUa-Ld-zh0" secondAttribute="width" id="3xL-1l-bVp"/>
+                            <constraint firstItem="jXR-GY-zSY" firstAttribute="centerY" secondItem="VUa-Ld-zh0" secondAttribute="centerY" id="4dt-o2-cvj"/>
+                            <constraint firstItem="VUa-Ld-zh0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-64" id="7N1-g1-apM"/>
+                            <constraint firstItem="jXR-GY-zSY" firstAttribute="height" secondItem="VUa-Ld-zh0" secondAttribute="height" id="Ern-Lr-2fp"/>
+                            <constraint firstItem="VUa-Ld-zh0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" constant="-40" id="TZk-KG-PzA"/>
+                            <constraint firstItem="jXR-GY-zSY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VOy-wa-X41"/>
+                            <constraint firstItem="VUa-Ld-zh0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="gje-08-Uxi"/>
+                            <constraint firstItem="VUa-Ld-zh0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="tDT-nl-H2z"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="actionLabel" destination="Tuv-iC-shB" id="Mlr-EC-fOT"/>
+                        <outlet property="inputsView" destination="jXR-GY-zSY" id="ti6-Ot-8Dy"/>
+                        <outlet property="loserImage" destination="Sf8-IB-ek0" id="JJl-OI-k3d"/>
+                        <outlet property="resultsView" destination="VUa-Ld-zh0" id="9eF-e2-tKu"/>
+                        <outlet property="winnerImage" destination="xI6-zi-Sdn" id="68c-NF-sKP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-791" y="234"/>
+            <point key="canvasLocation" x="-423" y="432"/>
         </scene>
     </scenes>
     <resources>

@@ -10,9 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var selectedButton: UIButton?
+
+    @IBOutlet weak var inputsView: UIView!
+
+    @IBOutlet weak var resultsView: UIStackView!
+    @IBOutlet weak var winnerImage: UIImageView!
+    @IBOutlet weak var actionLabel: UILabel!
+    @IBOutlet weak var loserImage: UIImageView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        resultsView.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +30,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func buttonClicked(sender: UIButton) {
+        selectedButton?.highlighted = false
 
+        selectedButton = sender
+        sender.highlighted = true
+    }
 }
 
