@@ -10,7 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var selectedButton: UIButton?
+    var selectedButton: UIButton? {
+        didSet {
+            oldValue?.highlighted = false
+            selectedButton?.highlighted = true
+        }
+    }
 
     @IBOutlet weak var inputsView: UIView!
 
@@ -31,10 +36,25 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonClicked(sender: UIButton) {
-        selectedButton?.highlighted = false
-
         selectedButton = sender
-        sender.highlighted = true
+
+        let playerChoice = Choice(rawValue: sender.tag)!
+        let result = Game.play(playerChoice)
+        resultsView.hidden = false
+
+        if playerChoice == result.winner {
+            winnerImage.image = UIImage(named: "\(result.winner.name)-highlighted")
+        } else {
+            winnerImage.image = UIImage(named: result.winner.name)
+        }
+
+        if playerChoice == result.loser {
+            loserImage.image = UIImage(named: "\(result.loser.name)-highlighted")
+        } else {
+            loserImage.image = UIImage(named: result.loser.name)
+        }
+
+        actionLabel.text = result.summary
     }
 }
 
