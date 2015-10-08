@@ -19,7 +19,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var inputsView: UIView!
 
-    @IBOutlet weak var resultsView: UIStackView!
+    @IBOutlet weak var resultsView: UIView!
     @IBOutlet weak var winnerImage: UIImageView!
     @IBOutlet weak var actionLabel: UILabel!
     @IBOutlet weak var loserImage: UIImageView!
