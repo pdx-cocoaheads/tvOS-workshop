@@ -19,9 +19,9 @@ enum Verb: String {
     case eats
     case poisons
 
-    init(winner: Choice, loser: Choice) {
-        guard winner != loser else { self = .draw; return }
-        switch (winner, loser) {
+    init(_ game: Game) {
+        guard game.winner != game.loser else { self = .draw; return }
+        switch (game.winner, game.loser) {
         case (.Rock, .Scissors), (.Rock, .Lizard):
             self = .crushes
         case (.Paper, .Rock):
@@ -39,7 +39,7 @@ enum Verb: String {
         case (.Spock, .Rock), (.Spock, .Scissors):
             self = .vaporizes
         default:
-            preconditionFailure("Invalid winner/loser combination: \(winner) does not beat \(loser)")
+            preconditionFailure("Invalid winner/loser combination: \(game.winner) does not beat \(game.loser)")
         }
     }
 }
@@ -80,7 +80,7 @@ struct Game {
     let winner: Choice
     let loser: Choice
     var draw: Bool { return winner == loser }
-    var verb: String { return Verb(winner: winner, loser: loser).rawValue }
+    var verb: String { return Verb(self).rawValue }
 
     init(choices p1: Choice, _ p2: Choice) {
         guard p1 != p2 else {
